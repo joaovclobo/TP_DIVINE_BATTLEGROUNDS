@@ -2,14 +2,24 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CloudFog } from "lucide-react";
-import { JSX, useState } from "react";
+import { CloudFog, RefreshCcw } from "lucide-react";
+import { JSX, SetStateAction, useState } from "react";
 
-function Map(): JSX.Element {
+interface IMapProps {
+  fogNumbers: number[];
+  setFogNumbers: React.Dispatch<SetStateAction<number[]>>;
+  playerPosition: number | null;
+  setPlayerPosition: React.Dispatch<SetStateAction<number | null>>;
+}
+
+function Map({
+  fogNumbers,
+  setFogNumbers,
+  playerPosition,
+  setPlayerPosition,
+}: IMapProps): JSX.Element {
   const mapNumbers = Array.from({ length: 100 }, (_, i) => i + 1);
-  const [playerPosition, setPlayerPosition] = useState<number | null>(null);
   const [selectFogMode, setSelectFogMode] = useState<boolean>(false);
-  const [fogNumbers, setFogNumbers] = useState<number[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
 
   function handleSelectPlayerPosition(number: number) {
@@ -58,15 +68,16 @@ function Map(): JSX.Element {
           }`}
           onClick={handleSelectFog}
         >
-          {selectFogMode ? "Selecione as casas com névoa" : "Selecionar Névoa"}
+          {selectFogMode
+            ? "Selecione as casas com neblina divina"
+            : "Selecionar neblina divina"}
           <CloudFog className="ml-2 size-64" color="white" />
         </Button>
         <Button
           className="bg-red-500 text-white my-4 h-12"
           onClick={handleResetFog}
         >
-          Resetar
-          <br /> névoa
+          <RefreshCcw className="size-64" color="white" />
         </Button>
       </div>
       <div className="flex flex-row mb-2 gap-2">
@@ -84,7 +95,7 @@ function Map(): JSX.Element {
           Selecionar
         </Button>
       </div>
-      <div className="grid grid-cols-10 gap-4">
+      <div className="grid grid-cols-10 gap-2">
         {mapNumbers.map((number) => (
           <Button
             key={number}
@@ -109,16 +120,16 @@ function Map(): JSX.Element {
       </div>
       <div className="flex flex-row mt-5 gap-2">
         <div className="w-full p-2 text-center flex justify-center items-center bg-sky-300 rounded-sm text-white">
-          Casa sem gás
+          Casa sem neblina divina
         </div>
         <div className="w-full p-2 text-center flex justify-center items-center bg-fuchsia-300 rounded-sm text-white">
-          Casa com gás
+          Casa com neblina divina
         </div>
         <div className="w-full p-2 text-center flex justify-center items-center bg-red-700 rounded-sm text-white">
-          Player no gás
+          Deus na neblina divina
         </div>
         <div className="w-full p-2 text-center flex justify-center items-center bg-cyan-800 rounded-sm text-white">
-          Player
+          Deus
         </div>
       </div>
     </div>
