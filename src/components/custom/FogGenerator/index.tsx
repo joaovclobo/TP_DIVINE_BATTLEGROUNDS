@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Copy } from "lucide-react";
-import { JSX, SetStateAction, useState } from "react";
+import { JSX, SetStateAction } from "react";
 
 interface IFogGeneratorProps {
   fogNumbers: number[];
@@ -86,7 +86,7 @@ function FogGenerator({
 
   return (
     <div className="w-full">
-      <h1 className="text-center text-stone-600 my-6 text-3xl">
+      <h1 className="text-center text-stone-600 my-6 text-4xl">
         Gerar névoa divina
       </h1>
       <div>

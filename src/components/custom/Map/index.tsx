@@ -60,7 +60,7 @@ function Map({
 
   return (
     <div className="w-full">
-      <h1 className="text-center text-stone-600 my-6 text-3xl">Mapa</h1>
+      <h1 className="text-center text-stone-600 my-6 text-4xl">Mapa</h1>
       <div className="flex items-center flex-row gap-2">
         <Button
           className={`bg-fuchsia-300 hover:bg-fuchsia-400 text-white w-full my-4 h-12 ${
