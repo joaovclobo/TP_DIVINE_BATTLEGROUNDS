@@ -6,15 +6,15 @@ import { JSX } from "react";
 function Gods(): JSX.Element {
   return (
     <div className="w-full">
-      <h1 className="text-center text-stone-600 my-6 text-4xl">Deuses</h1>
-      <div className="grid grid-cols-2 gap-8">
+      <h1 className="text-center text-stone-100 my-6 text-4xl">Deuses</h1>
+      <div className="grid lg:!grid-cols-2 sm:!grid-cols-1 gap-8">
         {GODS_DATA.map((god) => (
           <div
             key={god.id}
-            className="flex flex-col gap-4 p-6 bg-stone-100 border border-stone-200 shadow-sm rounded-sm"
+            className="flex flex-col gap-4 p-6 bg-fuchsia-100 border border-fuchsia-200 shadow-sm rounded-sm"
           >
             <img
-              src={`/images/${god.image}`}
+              src={`/images/gods/${god.image}`}
               alt={god.name}
               className="size-full rounded-[2%]"
             />

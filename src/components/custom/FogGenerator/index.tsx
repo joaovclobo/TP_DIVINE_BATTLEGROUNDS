@@ -86,12 +86,14 @@ function FogGenerator({
 
   return (
     <div className="w-full">
-      <h1 className="text-center text-stone-600 my-6 text-4xl">
+      <h1 className="text-center text-stone-100 my-6 text-4xl">
         Gerar névoa divina
       </h1>
       <div>
-        <label htmlFor="round">Rodada: </label>
-        <div className="flex flex-row mb-2 gap-2">
+        <label htmlFor="round" className="text-stone-200 text-[18px]">
+          Rodada:{" "}
+        </label>
+        <div className="flex flex-row justify-center items-center mb-2 gap-2">
           <Input
             className="focus-visible:ring-fuchsia-100"
             value={round}
@@ -101,22 +103,17 @@ function FogGenerator({
               setRound(parseInt(e.target.value));
             }}
           />
-          <Button
-            className="bg-fuchsia-300 hover:bg-fuchsia-400 text-white"
-            onClick={handleGenerateFog}
-          >
-            Avançar névoa
-          </Button>
         </div>
       </div>
+      <p className="text-stone-200 text-[18px]">Casas com névoa: </p>
       {fogNumbers.length > 0 && (
-        <div className="flex flex-row items-center text-justify  gap-3 my-2 border border-stone-200 p-3 rounded-sm">
+        <div className="flex flex-row items-center text-justify  gap-3 my-2 border border-stone-200 bg-stone-50 p-3 rounded-sm">
           {fogNumbers.join(", ")}
           <Button
             onClick={() => {
               navigator.clipboard.writeText(fogNumbers.join(", "));
             }}
-            className="bg-transparent hover:bg-transparent hover:text-stone-800 text-stone-500 size-8"
+            className="bg-transparent hover:bg-transparent hover:text-stone-800 text-stone-700 size-8"
           >
             <Copy />
           </Button>
@@ -126,18 +123,26 @@ function FogGenerator({
         {fogNumbers.map((fogNumber) => (
           <div
             key={fogNumber}
-            className="flex items-center justify-center bg-fuchsia-300 text-white p-2 rounded-sm"
+            className="flex items-center justify-center bg-fuchsia-300 text-stone-700 p-2 rounded-sm"
           >
             {fogNumber}
           </div>
         ))}
       </div>
-      <Button
-        className="bg-red-300 hover:bg-red-400 text-white w-full mt-4"
-        onClick={handleClearFog}
-      >
-        Limpar névoa
-      </Button>
+      <div className="flex flex-row items-center gap-2 mt-4">
+        <Button
+          className="bg-fuchsia-700 hover:bg-fuchsia-800 text-stone-100 w-full"
+          onClick={handleGenerateFog}
+        >
+          Avançar névoa
+        </Button>
+        <Button
+          className="bg-red-400 hover:bg-red-500 text-stone-700 w-fit"
+          onClick={handleClearFog}
+        >
+          Limpar névoa!
+        </Button>
+      </div>
     </div>
   );
 }

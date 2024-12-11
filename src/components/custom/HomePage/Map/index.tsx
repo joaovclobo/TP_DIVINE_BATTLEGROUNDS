@@ -60,10 +60,10 @@ function Map({
 
   return (
     <div className="w-full">
-      <h1 className="text-center text-stone-600 my-6 text-4xl">Mapa</h1>
+      <h1 className="text-center text-stone-100 my-6 text-4xl">Mapa</h1>
       <div className="flex items-center flex-row gap-2">
         <Button
-          className={`bg-fuchsia-300 hover:bg-fuchsia-400 text-white w-full my-4 h-12 ${
+          className={`bg-fuchsia-400 hover:bg-fuchsia-400 text-stone-700 w-full my-4 h-12 ${
             selectFogMode ? "bg-fuchsia-600" : ""
           }`}
           onClick={handleSelectFog}
@@ -71,10 +71,10 @@ function Map({
           {selectFogMode
             ? "Selecione as casas com neblina divina"
             : "Selecionar neblina divina"}
-          <CloudFog className="ml-2 size-64" color="white" />
+          <CloudFog className="ml-2 size-64" color="#1c1917" />
         </Button>
         <Button
-          className="bg-red-500 text-white my-4 h-12"
+          className="bg-red-500 text-stone-700 my-4 h-12"
           onClick={handleResetFog}
         >
           <RefreshCcw className="size-64" color="white" />
@@ -89,7 +89,7 @@ function Map({
           }}
         />
         <Button
-          className="bg-fuchsia-300 hover:bg-fuchsia-400 text-white"
+          className="bg-fuchsia-400 hover:bg-fuchsia-400 text-stone-700"
           onClick={handleSelectFogNumbers}
         >
           Selecionar
@@ -99,11 +99,11 @@ function Map({
         {mapNumbers.map((number) => (
           <Button
             key={number}
-            className={`bg-sky-300 hover:bg-sky-400 text-white ${
+            className={`bg-sky-300 hover:bg-sky-400 text-stone-700 ${
               playerPosition === number && fogNumbers.includes(number)
-                ? "bg-red-700"
+                ? "bg-red-400"
                 : playerPosition === number
-                ? "bg-cyan-800"
+                ? "bg-green-400"
                 : fogNumbers.includes(number)
                 ? "bg-fuchsia-300"
                 : ""
@@ -119,16 +119,16 @@ function Map({
         ))}
       </div>
       <div className="flex flex-row mt-5 gap-2">
-        <div className="w-full p-2 text-center flex justify-center items-center bg-sky-300 rounded-sm text-white">
+        <div className="w-full p-2 text-center flex justify-center items-center bg-sky-300 rounded-sm text-stone-700">
           Casa sem neblina divina
         </div>
-        <div className="w-full p-2 text-center flex justify-center items-center bg-fuchsia-300 rounded-sm text-white">
+        <div className="w-full p-2 text-center flex justify-center items-center bg-fuchsia-300 rounded-sm text-stone-700">
           Casa com neblina divina
         </div>
-        <div className="w-full p-2 text-center flex justify-center items-center bg-red-700 rounded-sm text-white">
+        <div className="w-full p-2 text-center flex justify-center items-center bg-red-400 rounded-sm text-stone-700">
           Deus na neblina divina
         </div>
-        <div className="w-full p-2 text-center flex justify-center items-center bg-cyan-800 rounded-sm text-white">
+        <div className="w-full p-2 text-center flex justify-center items-center bg-green-400 rounded-sm text-stone-700">
           Deus
         </div>
       </div>

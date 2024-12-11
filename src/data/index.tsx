@@ -10,6 +10,22 @@ type GodType = {
   image: string;
 };
 
+type WeaponType = {
+  id: string;
+  name: string;
+  description: string;
+  CD: string;
+  image: string;
+};
+
+type ArmorType = {
+  id: string;
+  name: string;
+  description: string;
+  CA: string;
+  image: string;
+};
+
 const GODS_DATA: GodType[] = [
   {
     id: "1",
@@ -117,4 +133,150 @@ const GODS_DATA: GodType[] = [
   },
 ];
 
-export { GODS_DATA };
+const WEAPONS_DATA: WeaponType[] = [
+  {
+    id: "1",
+    name: "Raio de Zeus",
+    description: "O poder dos céus… Em suas mãos!",
+    CD: "2d6",
+    image: "RaioDeZeus.jpg",
+  },
+  {
+    id: "2",
+    name: "Martelo de Thor",
+    description: "É mais fácil de levantar do que diziam…",
+    CD: "3d6",
+    image: "MarteloDeThor.jpg",
+  },
+  {
+    id: "3",
+    name: "Adaga Rúnica",
+    description: "Rúnica, mas não única, ok?",
+    CD: "1d4",
+    image: "AdagaRunica.jpg",
+  },
+  {
+    id: "4",
+    name: "Cetro do Faraó",
+    description: "O Faraó ordena… Os súditos obedecem.",
+    CD: "2d4",
+    image: "CetroDoFarao.jpg",
+  },
+  {
+    id: "5",
+    name: "Espada Curta",
+    description: "A arma mais simples o possível.",
+    CD: "1d6",
+    image: "EspadaCurta.jpg",
+  },
+  {
+    id: "6",
+    name: "Chakram de Aço",
+    description: "Uma arma lendária vinda das terras orientais.",
+    CD: "2d4",
+    image: "ChakramDeAco.jpg",
+  },
+  {
+    id: "7",
+    name: "Martelo Abissal",
+    description: "Um martelo que carrega as forças das profundezas…",
+    CD: "3d4",
+    image: "MarteloAbissal.jpg",
+  },
+  {
+    id: "8",
+    name: "Machado Viking",
+    description: "Não foi feito para cortar lenha…",
+    CD: "2d6",
+    image: "MachadoViking.jpg",
+  },
+  {
+    id: "9",
+    name: "Lança Eterna",
+    description: "Essa lança já estava aqui antes de todos nós… E ainda estará depois",
+    CD: "2d6",
+    image: "LancaEterna.jpg",
+  },
+  {
+    id: "10",
+    name: "Punhal Obscuro",
+    description: "Um punhal que exala energias sombrias",
+    CD: "1d6",
+    image: "PunhalObscuro.jpg",
+  },
+];
+
+const ARMORS_DATA: ArmorType[] = [
+  {
+    id: "1",
+    name: "Escudo Mágico",
+    description: "A proteção contra espadas e magias faz valer o peso colossal",
+    CA: "3",
+    image: "EscudoMagico.jpg",
+  },
+  {
+    id: "2",
+    name: "Traje Ritualístico",
+    description: "Esses trajes já presenciaram horrores indescritíveis…",
+    CA: "1",
+    image: "TrajeRitualistico.jpg",
+  },
+  {
+    id: "3",
+    name: "Sandália de Hermes",
+    description: "Passos leves que te levam longe!",
+    CA: "1",
+    image: "SandaliaDeHermes.jpg",
+  },
+  {
+    id: "4",
+    name: "Armadura Samurai",
+    description: "Belíssima armadura que equilibra peso e defesa",
+    CA: "2",
+    image: "ArmaduraSamurai.jpg",
+  },
+  {
+    id: "5",
+    name: "Armadura Pesada",
+    description: "Proteção completa.",
+    CA: "3",
+    image: "ArmaduraPesada.jpg",
+  },
+  {
+    id: "6",
+    name: "Elmo Legionário",
+    description: "A crina é totalmente desnecessária",
+    CA: "1",
+    image: "ElmoLegionario.jpg",
+  },
+  {
+    id: "7",
+    name: "Chapéu de Vaqueiro",
+    description: "...faz o tiro certeiro!",
+    CA: "1",
+    image: "ChapeuDeVaqueiro.jpg",
+  },
+  {
+    id: "8",
+    name: "Armadura Celestial",
+    description: "Feita de material coletado de um asteróide",
+    CA: "3",
+    image: "ArmaduraCelestial.jpg",
+  },
+  {
+    id: "9",
+    name: "Armadura de Escamas",
+    description: "As escamas de grifo são tão resistentes quanto leves",
+    CA: "2",
+    image: "ArmaduraDeEscamas.jpg",
+  },
+  {
+    id: "10",
+    name: "Coroa Gélida",
+    description: "Não esquente a cabeça!",
+    CA: "1",
+    image: "CoroaGelida.jpg",
+  },
+];
+
+export { GODS_DATA, WEAPONS_DATA, ARMORS_DATA };
