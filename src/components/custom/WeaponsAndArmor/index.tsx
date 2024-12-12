@@ -1,6 +1,6 @@
 "use client";
 
-import { GODS_DATA, WEAPONS_DATA } from "../../../data/index";
+import { WEAPONS_DATA } from "../../../data/index";
 import { JSX } from "react";
 
 function WeaponsAndArmor(): JSX.Element {
