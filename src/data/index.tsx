@@ -33,9 +33,9 @@ const GODS_DATA: GodType[] = [
     panteon: "Nórdico",
     pv: "40",
     ca: "1",
-    cd: "1d6",
+    cd: "1d8",
     hability:
-      "Malandragem do Deus das Mentiras - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
+      "Magia do gigante louco - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
     description:
       "Conhecido como o deus da trapaça, Loki comumente é definido como uma das figuras mais complexas da mitologia nórdica. Considerado um misto de deus e gigante, ele possui um grande senso de estratégia e usa suas habilidades para seus interesses, envolvendo intriga e mentiras complexas.",
     image: "Loki.jpg",
@@ -57,52 +57,52 @@ const GODS_DATA: GodType[] = [
     id: "3",
     name: "Zeus",
     panteon: "Grego",
-    pv: "40",
-    ca: "2",
-    cd: "2",
+    pv: "45",
+    ca: "1",
+    cd: "1d4",
     hability:
-      "Malandragem do Deus das Mentiras - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
+      "Propagação da Justiça - Sempre que você tirar 1 no seu dado de dano, você pode ativar a sua habilidade para rerolar o dado.",
     description:
-      "Conhecido como o deus da trapaça, Loki comumente é definido como uma das figuras mais complexas da mitologia nórdica. Considerado um misto de deus e gigante, ele possui um grande senso de estratégia e usa suas habilidades para seus interesses, envolvendo intriga e mentiras complexas.",
+      "O Senhor do Olimpo controlava os céus regendo o universo. Filho do titã Cronos, lutou contra seu pai para resgatar os seus irmãos Héstia, Hades, Hera, Poseidon e Deméter da morte.",
     image: "Zeus.jpg",
   },
   {
     id: "4",
     name: "Ares",
     panteon: "Grego",
-    pv: "40",
-    ca: "1",
-    cd: "1d6",
+    pv: "45",
+    ca: "4",
+    cd: "1",
     hability:
-      "Malandragem do Deus das Mentiras - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
+      "Fúria do Senhor da Guerra - Você pode utilizar sua habilidade a cada dois turnos durante o combate para mitigar 1/4 da sua CA no dano que bate direto na vida.",
     description:
-      "Conhecido como o deus da trapaça, Loki comumente é definido como uma das figuras mais complexas da mitologia nórdica. Considerado um misto de deus e gigante, ele possui um grande senso de estratégia e usa suas habilidades para seus interesses, envolvendo intriga e mentiras complexas.",
+      "Conhecido como o Deus da Guerra, Ares nasceu predestinado a substituir Zeus com o seu poder avassalador. Entretanto, Ares foi banido do Monte Olimpo após trazer à tona a fúria de Hefesto.",
     image: "Ares.jpg",
   },
   {
     id: "5",
     name: "Sobek",
     panteon: "Egípicio",
-    pv: "40",
-    ca: "1",
-    cd: "1d6",
+    pv: "50",
+    ca: "3",
+    cd: "1",
     hability:
-      "Malandragem do Deus das Mentiras - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
+      "Calmaria do Nilo - Suas escamas o tornam um ser difícil de derrubar. Ao utilizar a sua habilidade, Sobek adiciona 1/3 da sua CA atual à sua CA e 25 aos seus PV.",
     description:
-      "Conhecido como o deus da trapaça, Loki comumente é definido como uma das figuras mais complexas da mitologia nórdica. Considerado um misto de deus e gigante, ele possui um grande senso de estratégia e usa suas habilidades para seus interesses, envolvendo intriga e mentiras complexas.",
+      "Também conhecido como Suchus, Sobek era associado ao poder faraônico, à fertilidade, à proeza militar e à proteção contra os perigos do Nilo.",
     image: "Sobek.jpg",
   },
   {
     id: "6",
-    name: "Horus",
+    name: "Hórus",
     panteon: "Egípicio",
-    pv: "40",
-    ca: "1",
-    cd: "1d6",
+    pv: "50",
+    ca: "2",
+    cd: "2",
     hability:
-      "Malandragem do Deus das Mentiras - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
+      "O Olho Que Tudo Vê - Udyat permite que sempre que um outro deus utilize a sua habilidade especial, as suas coordenadas sejam reveladas para Hórus.",
     description:
-      "Conhecido como o deus da trapaça, Loki comumente é definido como uma das figuras mais complexas da mitologia nórdica. Considerado um misto de deus e gigante, ele possui um grande senso de estratégia e usa suas habilidades para seus interesses, envolvendo intriga e mentiras complexas.",
+      "O deus dos céus era o protetor da humanidade, da realeza e patrono dos homens jovens. Era o portador de Udyat, conhecido como o Olho de Hórus, visto como um símbolo de proteção contra o mau.",
     image: "Horus.jpg",
   },
   {
@@ -113,9 +113,9 @@ const GODS_DATA: GodType[] = [
     ca: "1",
     cd: "1d6",
     hability:
-      "Malandragem do Deus das Mentiras - Você possui a capacidade de arremessar suas adagas, sempre ganhando 1 de alcance adicional nos ataques da sua arma. Além disso, você pode usar sua habilidade para revelar jogadores em uma área de 4 quadrados adjacentes.",
+      "As Cinzas dos Meus Inimigos - Ao ativar a sua habilidade, você pode causar ao inimigo a cada 2 turnos o mesmo dano que ele te causar, durante o combate.",
     description:
-      "Conhecido como o deus da trapaça, Loki comumente é definido como uma das figuras mais complexas da mitologia nórdica. Considerado um misto de deus e gigante, ele possui um grande senso de estratégia e usa suas habilidades para seus interesses, envolvendo intriga e mentiras complexas.",
+      "Conhecido como 'O Destruidor', Shiva está associado à renovação, criação e fertilidade. É dito que ele esfrega em seu corpo as cinzas de corpos, e por isso a sua pele possui uma coloração acinzentada.",
     image: "Shiva.jpg",
   },
   {
