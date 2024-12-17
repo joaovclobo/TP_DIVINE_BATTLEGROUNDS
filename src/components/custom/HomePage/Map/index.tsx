@@ -105,7 +105,7 @@ function Map({
                 : playerPosition === number
                 ? "bg-green-400"
                 : fogNumbers.includes(number)
-                ? "bg-fuchsia-300"
+                ? "bg-fuchsia-300 line-through"
                 : ""
             }`}
             onClick={() =>
